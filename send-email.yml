@@ -1,0 +1,15 @@
+---
+  - name: Email sending using Ansible
+    hosts: localhost
+    tasks:
+      - name: Sending e-mail using module
+        mail:
+          host: 'smtp.email.sa-saopaulo-1.oci.oraclecloud.com'
+          port: 587
+          username: 'usuário aqui'
+          password: 'senha aqui'
+          to: 'fulanodetal@gmail.com'
+          subject: 'Ansible-report'
+          body: 'Este e-mail foi enviado pela ferramenta Ansible'
+          secure: starttls
+          sender: 'noreply@jcsantos.ddns.net'
